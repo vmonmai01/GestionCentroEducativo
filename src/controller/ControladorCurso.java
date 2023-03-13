@@ -112,10 +112,11 @@ public class ControladorCurso {
 		try {
 			Connection conn = ConnectionManager.getConexion();
 			PreparedStatement ps = conn.prepareStatement(
-					"update curso set id = ?, descripcion = ? where id = ?");
+					"update curso set descripcion = ? where id = ?");
 		
-			ps.setInt(1, c.getId());
-			ps.setString(2, c.getDescripcion());
+			
+			ps.setString(1, c.getDescripcion());
+			ps.setInt(2, c.getId());
 			int rows = ps.executeUpdate();
 			ps.close();
 			conn.close();

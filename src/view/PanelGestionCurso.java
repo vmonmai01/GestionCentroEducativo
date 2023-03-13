@@ -31,7 +31,7 @@ public class PanelGestionCurso extends JPanel {
 	private JTextField jtfDescripcion;
 	JButton btnPrimero, btnAnterior, btnSiguiente, btnUltimo;
 	List<Curso> cursos = ControladorCurso.findAll();
-	private int indiceActual;
+	
 
 	/**
 	 * Create the panel.
